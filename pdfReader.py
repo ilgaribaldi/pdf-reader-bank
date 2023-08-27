@@ -9,7 +9,7 @@ function_map = {
 
 
 def getResponse(request):
-    func = function_map.get(request["issuer"], {}).get(request["policyType"], None)
+    func = function_map.get(request["issuer"], {}).get(request["pdfType"], None)
 
     if func is not None:
         # If the function is found, call it and save its output
@@ -17,5 +17,5 @@ def getResponse(request):
         return output
     else:
         # If the function is not found, return an error message
-        return "Function not found for the given issuer and policyType"
+        return "Function not found for the given issuer and pdfType"
 
