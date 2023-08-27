@@ -17,5 +17,5 @@ def getResponse(request):
         return output
     else:
         # If the function is not found, return an error message
-        return "Function not found for the given insuranceCompany and insuranceType"
+        return "Function not found for the given issuer and policyType"
 
